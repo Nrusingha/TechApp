@@ -1,0 +1,75 @@
+<%- include('header') %>
+<div class="container">
+    <div class="row">
+
+        <div id="signupbox" style="margin-top:20px" class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title"> Create New Customer</div>
+                </div>
+                <div class="panel-body">
+                    <form action="/customer/create" id="CustomerForm" class="form-horizontal" method="post"
+                        role="form">
+
+                        <div class="form-group">
+
+                            <!-- <% if(errors !=''){%>
+                            <p style="text-align: center;color:red;"><%= errors.FirstName.msg %></p>
+                            <% } %>
+
+                            <% if(success !=''){%>
+                            <p style="text-align: center;color:green;"><%= success %></p>
+                            <% } %> -->
+
+                            <label for="FirstName" class="col-md-3 control-label"> First Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="FirstName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="LastName" class="col-md-3 control-label"> Last Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="LastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Mobile" class="col-md-3 control-label"> Mobile:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="Mobile" maxlength="10" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email" class="col-md-3 control-label"> Email:</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" name="Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="DOB" class="col-md-3 control-label"> DOB:</label>
+                            <div class="col-md-9">
+                                <input type="date" class="form-control" name="DOB" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+                            </div>
+                        </div>
+
+                        <p class="text-right"><a href="/customers">View All Customer Lists</a></p>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<%- include('footer') %>
